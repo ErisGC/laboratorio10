@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let a = parseInt(prompt("Ingrese un número para a:\n"));
+        let b;
+        do{
+            b = parseInt(prompt("Ingrese un número para b:\n"));
+            if(b==0) {
+            console.log("Debe ser diferente de 0");
+            }
+        }while (b == 0);
+
+        do{
+            op = prompt("Qué desea hacer?(Elija de 1-4): \n1. Suma\n2. Resta\n3. Multiplicación\n4. División\n");
+            if(op <1 || op > 4){
+                console.log(op+" no es una opción válida, elija una opción dentro del rango aceptable");
+            }
+        console.log("Numero a: "+ a, " Número b: ", b)
+        }while(op <1 || op > 4);
+        if(op==1){
+            result = a + b;
+        } else if (op == 2){
+            result = a - b;
+        } else if (op == 3){
+            result = a * b;
+        } else if (op == 4){
+            result = a / b;
+        }
+        console.log("El resultado de la operación deseada es "+ result);
+
+        console.log(a<b);
+        console.log(a>b);
+        console.log(a==b);
+        console.log(a!=b);
+    </script>
+</body>
+</html>
